@@ -1,9 +1,13 @@
-import React from 'react'
+// Libraries
+import React from 'react';
+
+//Components
+import Play from '../Play/Play';
 
 function NavBar() {
     return (
         <div>
-            Hello from navbar
+            <a href="/play" onClick={<Play />}>Play</a>
         </div>
     )
 }
