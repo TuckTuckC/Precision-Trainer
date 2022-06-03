@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Welcome from './Components/Welcome/Welcome';
 import Navbar from './Components/Navbar/Navbar';
 import Play from './Components/Play/Play';
+import Clicking from './Components/Clicking/Clicking';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Routes>
                 <Route index path='/' element={<Welcome />} />
                 <Route index path='/play' element={<Play />} />
+                <Route index path='/clicking' element={<Clicking />}/>
             </Routes>
         </Router>
   );

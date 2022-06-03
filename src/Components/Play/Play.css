@@ -1,0 +1,22 @@
+.scenario:hover {
+    cursor: pointer;
+    background-color: rgb(0, 173, 139);
+}
+
+.scenario {
+    border: 0.2vh solid black;
+    margin: 0.5vh;
+    padding: 1vh;
+    height: 66vh;
+}
+
+.modeContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 3vh;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 0 auto;
+}
