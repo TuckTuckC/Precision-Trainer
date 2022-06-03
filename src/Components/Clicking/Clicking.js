@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 // Components
 import './Clicking.css';
+import Target from './Target/Target.js'
 
 function Clicking() {
 
@@ -20,7 +21,76 @@ function Clicking() {
         <div className="container">
             <p className="score">Score: {score}</p>
             <div className="playBoard">
-
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
+                <Target />
             </div>
         </div>
     </div>

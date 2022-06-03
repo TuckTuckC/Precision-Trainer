@@ -1,4 +1,7 @@
 .playBoard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.3vh;
     border: 0.2vh solid black;
     height: 70vh;
     margin: 5vh 0 0 0;
