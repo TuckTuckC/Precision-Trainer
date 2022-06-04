@@ -1,7 +1,12 @@
 .target {
     background-color: rgb(132, 132, 132);
+    border-radius: 50%;
 }
 
 .active {
     background-color: red;
+}
+
+.active:hover {
+    cursor: pointer;
 }
