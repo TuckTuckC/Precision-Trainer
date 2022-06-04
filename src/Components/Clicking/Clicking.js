@@ -16,6 +16,9 @@ function Clicking() {
         )
     );
     const [newSpawnID, setNewSpawnID] = useState(null);
+    const [playing, setPlaying] = useState(false)
+    const [time, setTime] = useState(false);
+    const [counter, setCounter] = useState(0);
 
     // STRETCH GOAL: Dynamic playboard sizes
     // const [playHeight, setPlayHeight] = useState(15)
@@ -26,9 +29,11 @@ function Clicking() {
     }
     // Game Round
     const start = () => {
+
         return (
             targetArray.map((key, index) => (
                 <Target 
+                setPlaying={setPlaying}
                 spawn1={spawn1} 
                 newSpawnID={newSpawnID} 
                 score={score} 
@@ -43,6 +48,21 @@ function Clicking() {
         
     }
 
+    // UseEffect for the 1 minute timer
+    useEffect(() => {
+        let interval;
+        if (time) {
+            interval = setInterval(() => {
+
+            }, 1000)
+        } else {
+            clearInterval(interval);
+        }
+
+
+        return () => clearInterval(interval);
+    }, [time])
+
     
 
   return (
@@ -50,19 +70,9 @@ function Clicking() {
         <h1 className="subtitle">Clicking</h1>
         <div className="container">
             <p className="score">Score: {score}</p>
+            <button onClick={() => {setPlaying(true); }} className="startBtn">Start</button>
             <div className="playBoard">
-                {targetArray.map((key, index) => (
-                    <Target 
-                    spawn1={spawn1} 
-                    newSpawnID={newSpawnID} 
-                    score={score} 
-                    setScore={setScore} 
-                    setSpawnList={setSpawnList}
-                    spawnList={spawnList} 
-                    key={key} 
-                    index={index}
-                    />
-                ))}
+                {playing === true ? start() : null}
             </div>
         </div>
     </div>
