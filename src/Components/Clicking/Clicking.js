@@ -16,12 +16,16 @@ function Clicking() {
             {length: 5}, () => Math.floor(Math.random() * 69)
         )
     );
-
-    console.log(random);
+    const [newSpawnID, setNewSpawnID] = useState(null);
 
     // STRETCH GOAL: Dynamic playboard sizes
     // const [playHeight, setPlayHeight] = useState(15)
     // const [playWidth, setPlayWidth] = useState(12)
+
+    const spawn1 = () => {
+        setNewSpawnID(Math.floor(Math.random() * 69))
+        setRandom([...random, newSpawnID])
+    }
 
   return (
     <div>
@@ -30,7 +34,16 @@ function Clicking() {
             <p className="score">Score: {score}</p>
             <div className="playBoard">
                 {targetArray.map((key, index) => (
-                    <Target random={random} key={key} index={index}/>
+                    <Target 
+                    spawn1={spawn1} 
+                    newSpawnID={newSpawnID} 
+                    score={score} 
+                    setScore={setScore} 
+                    setRandom={setRandom}
+                    random={random} 
+                    key={key} 
+                    index={index}
+                    />
                 ))}
             </div>
         </div>
