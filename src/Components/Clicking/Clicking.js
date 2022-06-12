@@ -1,10 +1,11 @@
 // Libraries
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 // Components
 import './Clicking.css';
-import Target from './Target/Target.js'
+import Target from './Target/Target.js';
+import Timer from '../Timer/Timer';
 
 function Clicking() {
     // State
@@ -17,8 +18,10 @@ function Clicking() {
     );
     const [newSpawnID, setNewSpawnID] = useState(null);
     const [playing, setPlaying] = useState(false)
-    const [time, setTime] = useState(false);
-    const [counter, setCounter] = useState(0);
+    const defaultTime = 30;
+    const [time, setTime] = useState(defaultTime);
+
+    const [startTimer, setStartTimer] = useState(false);
 
     // STRETCH GOAL: Dynamic playboard sizes
     // const [playHeight, setPlayHeight] = useState(15)
@@ -27,8 +30,17 @@ function Clicking() {
         setNewSpawnID(Math.floor(Math.random() * 69))
         setSpawnList([...spawnList, newSpawnID])
     }
+
+    const startGame = () => {
+        setScore(0);
+        setTime(defaultTime);
+        setPlaying(true);
+        setStartTimer(true);
+    }
+
     // Game Round
     const start = () => {
+
 
         return (
             targetArray.map((key, index) => (
@@ -46,31 +58,15 @@ function Clicking() {
             ))
         )
         
-    }
-
-    // UseEffect for the 1 minute timer
-    useEffect(() => {
-        let interval;
-        if (time) {
-            interval = setInterval(() => {
-
-            }, 1000)
-        } else {
-            clearInterval(interval);
-        }
-
-
-        return () => clearInterval(interval);
-    }, [time])
-
-    
+    } 
 
   return (
     <div>
         <h1 className="subtitle">Clicking</h1>
         <div className="container">
             <p className="score">Score: {score}</p>
-            <button onClick={() => {setPlaying(true); }} className="startBtn">Start</button>
+            <Timer setPlaying = {setPlaying} startTimer = {startTimer} setStartTimer = {setStartTimer} time = {time} setTime = {setTime} />
+            <button onClick={() => startGame()} className="startBtn">Start</button>
             <div className="playBoard">
                 {playing === true ? start() : null}
             </div>
