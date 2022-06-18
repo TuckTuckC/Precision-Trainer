@@ -1,3 +1,9 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .playBoard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -7,4 +13,16 @@
     width: 90vh;
     margin: 5vh 0 0 0;
     background-color: rgb(132, 132, 132);
+}
+
+.challenge {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.2vh solid black;
+    padding: 0.7vw;
+    margin: 0.7vw;
 }

@@ -20,3 +20,16 @@
     text-align: center;
     margin: 0 auto;
 }
+
+.startBtn {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(0, 255, 170);
+    padding: 0.5vw;
+    border-radius: 1.3vh;
+}
+
+.startBtn:hover {
+    background-color: rgb(0, 217, 255);
+    color: black;
+}

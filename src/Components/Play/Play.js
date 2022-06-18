@@ -41,19 +41,19 @@ function Play() {
                     <h2>Clicking</h2>
                     <button className="cInfoBtn" onClick={() => moreInfo(cInfo)}>More Info</button>
                     <p className='cInfo' style={cShowing ? { visibility: 'visible' } : { visibility: 'hidden' }}>Hone your aim on multiple static targets</p>
-                    <a href="/clicking" onClick={<Clicking />}>Start Challenge</a>
+                    <a className='startBtn' href="/clicking"> Start Challenge</a>
                 </div>
                 <div className='scenario'>
                     <h2>Tacking</h2>
                     <button className="tInfoBtn" onClick={() => moreInfo(tInfo)}>More Info</button>
                     <p className='tInfo' style={tShowing ? { visibility: 'visible' } : { visibility: 'hidden' }}>Hone your aim on moving targets that are invincible</p>
-                    <button className="tPlayBtn">Start Challenge</button>
+                    <a className='startBtn' href="/tracking">Start Challenge</a>
                 </div>
                 <div className='scenario'>
                     <h2>Switching</h2>
                     <button className="sInfoBtn"  onClick={() => moreInfo(sInfo)}>More Info</button>
                     <p className='sInfo' style={sShowing ? { visibility: 'visible' } : { visibility: 'hidden' }}>Hone your aim on multiple moving tergets</p>
-                    <button className="sPlayBtn">Start Challenge</button>
+                    <a className='startBtn' href="/switching">Start Challenge</a>
                 </div>
             </div>
 

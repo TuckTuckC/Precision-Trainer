@@ -1,0 +1,23 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    height: 23vh;
+    width: 70vw;
+    margin: 3vh 0 3vh 0;
+}
+
+.info {
+    border: 0.3vh solid black;
+}
+
+.news {
+    border: 0.3vh solid black;
+}
+
+.guides {
+    border: 0.3vh solid black;
+}
