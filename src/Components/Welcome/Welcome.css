@@ -2,22 +2,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 0.3vh solid white;
+    height: 92vh;
 }
 
 .section {
     height: 23vh;
     width: 70vw;
     margin: 3vh 0 3vh 0;
+    border: 0.3vh solid white;
+    border-radius: 3vw;
+    padding: 1vw;
 }
 
-.info {
-    border: 0.3vh solid black;
+/* .info {
 }
 
 .news {
-    border: 0.3vh solid black;
 }
 
 .guides {
-    border: 0.3vh solid black;
-}
+} */
