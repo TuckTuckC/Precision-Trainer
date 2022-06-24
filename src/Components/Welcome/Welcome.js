@@ -15,8 +15,12 @@ function Welcome() {
                 <h2>Switching</h2>
                 <p>Switching mode contains multiple moving targets that you must keep your cursor over to increase your score, these targets are not invincible.</p> */}
             </div>
-            <div className="news section">News</div>
-            <div className="guides section">Guides</div>
+            <div className="news section">
+                <h1>News</h1>
+            </div>
+            <div className="guides section">
+                <h1>Guides</h1>
+            </div>
         </div>
     )
 }
