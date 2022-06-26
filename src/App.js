@@ -10,6 +10,7 @@ import Welcome from './Components/Welcome/Welcome';
 import Navbar from './Components/Navbar/Navbar';
 import Play from './Components/Play/Play';
 import Clicking from './Components/Clicking/Clicking';
+import Tracking from './Components/Tracking/Tracking';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Route index path='/' element={<Welcome />} />
                 <Route index path='/play' element={<Play />} />
                 <Route index path='/clicking' element={<Clicking />}/>
+                <Route index path='/tracking' element={<Tracking />}/>
             </Routes>
         </Router>
   );
