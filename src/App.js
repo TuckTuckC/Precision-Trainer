@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Components
 import Welcome from './Components/Welcome/Welcome';
-import Navbar from './Components/Navbar/Navbar';
+import NavBar from './Components/NavBar/NavBar';
 import Play from './Components/Play/Play';
 import Clicking from './Components/Clicking/Clicking';
 import Tracking from './Components/Tracking/Tracking';
@@ -16,7 +16,7 @@ import Tracking from './Components/Tracking/Tracking';
 function App() {
   return (
     <Router>
-            <Navbar />
+            <NavBar />
             <Routes>
                 <Route index path='/' element={<Welcome />} />
                 <Route index path='/play' element={<Play />} />
